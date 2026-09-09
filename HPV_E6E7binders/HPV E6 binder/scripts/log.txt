@@ -1,0 +1,560 @@
+WARNING: You're overriding the checkpoint path from the defaults. Check that the model you're providing can run with the inputs you're providing.
+[2024-11-08 11:26:04,129][inference.model_runners][INFO] - Reading checkpoint from /home/stu2/RFdiffusion-main/models/Complex_beta_ckpt.pt
+This is inf_conf.ckpt_path
+/home/stu2/RFdiffusion-main/models/Complex_beta_ckpt.pt
+Assembling -model, -diffuser and -preprocess configs from checkpoint
+USING MODEL CONFIG: self._conf[model][n_extra_block] = 4
+USING MODEL CONFIG: self._conf[model][n_main_block] = 32
+USING MODEL CONFIG: self._conf[model][n_ref_block] = 4
+USING MODEL CONFIG: self._conf[model][d_msa] = 256
+USING MODEL CONFIG: self._conf[model][d_msa_full] = 64
+USING MODEL CONFIG: self._conf[model][d_pair] = 128
+USING MODEL CONFIG: self._conf[model][d_templ] = 64
+USING MODEL CONFIG: self._conf[model][n_head_msa] = 8
+USING MODEL CONFIG: self._conf[model][n_head_pair] = 4
+USING MODEL CONFIG: self._conf[model][n_head_templ] = 4
+USING MODEL CONFIG: self._conf[model][d_hidden] = 32
+USING MODEL CONFIG: self._conf[model][d_hidden_templ] = 32
+USING MODEL CONFIG: self._conf[model][p_drop] = 0.15
+USING MODEL CONFIG: self._conf[model][SE3_param_full] = {'num_layers': 1, 'num_channels': 32, 'num_degrees': 2, 'n_heads': 4, 'div': 4, 'l0_in_features': 8, 'l0_out_features': 8, 'l1_in_features': 3, 'l1_out_features': 2, 'num_edge_features': 32}
+USING MODEL CONFIG: self._conf[model][SE3_param_topk] = {'num_layers': 1, 'num_channels': 32, 'num_degrees': 2, 'n_heads': 4, 'div': 4, 'l0_in_features': 64, 'l0_out_features': 64, 'l1_in_features': 3, 'l1_out_features': 2, 'num_edge_features': 64}
+USING MODEL CONFIG: self._conf[model][d_time_emb] = 0
+USING MODEL CONFIG: self._conf[model][d_time_emb_proj] = 10
+USING MODEL CONFIG: self._conf[model][freeze_track_motif] = False
+USING MODEL CONFIG: self._conf[model][use_motif_timestep] = True
+USING MODEL CONFIG: self._conf[diffuser][T] = 50
+USING MODEL CONFIG: self._conf[diffuser][b_0] = 0.01
+USING MODEL CONFIG: self._conf[diffuser][b_T] = 0.07
+USING MODEL CONFIG: self._conf[diffuser][schedule_type] = linear
+USING MODEL CONFIG: self._conf[diffuser][so3_type] = igso3
+USING MODEL CONFIG: self._conf[diffuser][crd_scale] = 0.25
+USING MODEL CONFIG: self._conf[diffuser][so3_schedule_type] = linear
+USING MODEL CONFIG: self._conf[diffuser][min_b] = 1.5
+USING MODEL CONFIG: self._conf[diffuser][max_b] = 2.5
+USING MODEL CONFIG: self._conf[diffuser][min_sigma] = 0.02
+USING MODEL CONFIG: self._conf[diffuser][max_sigma] = 1.5
+USING MODEL CONFIG: self._conf[preprocess][sidechain_input] = False
+USING MODEL CONFIG: self._conf[preprocess][motif_sidechain_input] = True
+USING MODEL CONFIG: self._conf[preprocess][d_t1d] = 24
+USING MODEL CONFIG: self._conf[preprocess][d_t2d] = 44
+USING MODEL CONFIG: self._conf[preprocess][prob_self_cond] = 0.5
+USING MODEL CONFIG: self._conf[preprocess][str_self_cond] = True
+USING MODEL CONFIG: self._conf[preprocess][predict_previous] = False
+[2024-11-08 11:26:08,640][inference.model_runners][INFO] - Loading checkpoint.
+[2024-11-08 11:26:12,350][diffusion][INFO] - Using cached IGSO3.
+Successful diffuser __init__
+[2024-11-08 11:26:12,364][__main__][INFO] - Making design ./1_E6_beat/1_E6_b_0
+[2024-11-08 11:26:12,373][inference.model_runners][INFO] - Using contig: ['H1-151/0 50-90']
+With this beta schedule (linear schedule, beta_0 = 0.04, beta_T = 0.28), alpha_bar_T = 0.00013696048699785024
+[2024-11-08 11:26:12,413][inference.model_runners][INFO] - Sequence init: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:15,544][inference.utils][INFO] - Sampled motif RMSD: 0.16
+[2024-11-08 11:26:15,550][inference.model_runners][INFO] - Timestep 50, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:17,539][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:17,543][inference.model_runners][INFO] - Timestep 49, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:19,530][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:19,534][inference.model_runners][INFO] - Timestep 48, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:21,164][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:21,169][inference.model_runners][INFO] - Timestep 47, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:22,985][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:22,989][inference.model_runners][INFO] - Timestep 46, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:24,811][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:24,816][inference.model_runners][INFO] - Timestep 45, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:26,101][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:26:26,106][inference.model_runners][INFO] - Timestep 44, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:27,403][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:27,407][inference.model_runners][INFO] - Timestep 43, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:28,710][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:28,714][inference.model_runners][INFO] - Timestep 42, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:30,026][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:30,030][inference.model_runners][INFO] - Timestep 41, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:31,336][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:31,340][inference.model_runners][INFO] - Timestep 40, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:32,661][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:32,666][inference.model_runners][INFO] - Timestep 39, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:33,995][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:33,999][inference.model_runners][INFO] - Timestep 38, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:35,330][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:35,334][inference.model_runners][INFO] - Timestep 37, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:36,674][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:36,679][inference.model_runners][INFO] - Timestep 36, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:38,015][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:38,020][inference.model_runners][INFO] - Timestep 35, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:39,354][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:39,358][inference.model_runners][INFO] - Timestep 34, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:40,714][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:40,719][inference.model_runners][INFO] - Timestep 33, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:42,085][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:42,089][inference.model_runners][INFO] - Timestep 32, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:43,454][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:43,461][inference.model_runners][INFO] - Timestep 31, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:44,824][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:44,829][inference.model_runners][INFO] - Timestep 30, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:46,190][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:46,194][inference.model_runners][INFO] - Timestep 29, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:47,544][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:47,548][inference.model_runners][INFO] - Timestep 28, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:48,923][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:26:48,927][inference.model_runners][INFO] - Timestep 27, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:50,293][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:50,297][inference.model_runners][INFO] - Timestep 26, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:51,676][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:51,681][inference.model_runners][INFO] - Timestep 25, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:53,067][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:53,071][inference.model_runners][INFO] - Timestep 24, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:54,458][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:54,462][inference.model_runners][INFO] - Timestep 23, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:55,849][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:55,853][inference.model_runners][INFO] - Timestep 22, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:57,238][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:57,243][inference.model_runners][INFO] - Timestep 21, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:26:58,629][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:26:58,633][inference.model_runners][INFO] - Timestep 20, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:00,024][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:00,029][inference.model_runners][INFO] - Timestep 19, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:01,425][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:01,429][inference.model_runners][INFO] - Timestep 18, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:02,823][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:02,828][inference.model_runners][INFO] - Timestep 17, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:04,226][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:04,230][inference.model_runners][INFO] - Timestep 16, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:05,627][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:05,632][inference.model_runners][INFO] - Timestep 15, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:07,036][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:07,041][inference.model_runners][INFO] - Timestep 14, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:08,443][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:08,447][inference.model_runners][INFO] - Timestep 13, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:09,851][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:27:09,855][inference.model_runners][INFO] - Timestep 12, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:11,246][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:27:11,250][inference.model_runners][INFO] - Timestep 11, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:12,658][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:27:12,662][inference.model_runners][INFO] - Timestep 10, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:14,077][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:14,081][inference.model_runners][INFO] - Timestep 9, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:15,488][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:27:15,492][inference.model_runners][INFO] - Timestep 8, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:16,890][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:16,895][inference.model_runners][INFO] - Timestep 7, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:18,312][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:27:18,316][inference.model_runners][INFO] - Timestep 6, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:19,732][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:19,736][inference.model_runners][INFO] - Timestep 5, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:21,150][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:21,154][inference.model_runners][INFO] - Timestep 4, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:22,570][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:22,575][inference.model_runners][INFO] - Timestep 3, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:23,990][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:23,995][inference.model_runners][INFO] - Timestep 2, input to next step: -------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:28,923][__main__][INFO] - Finished design in 1.28 minutes
+[2024-11-08 11:27:28,923][__main__][INFO] - Making design ./1_E6_beat/1_E6_b_1
+[2024-11-08 11:27:28,932][inference.model_runners][INFO] - Using contig: ['H1-151/0 50-90']
+With this beta schedule (linear schedule, beta_0 = 0.04, beta_T = 0.28), alpha_bar_T = 0.00013696048699785024
+[2024-11-08 11:27:28,972][inference.model_runners][INFO] - Sequence init: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:30,561][inference.utils][INFO] - Sampled motif RMSD: 0.17
+[2024-11-08 11:27:30,566][inference.model_runners][INFO] - Timestep 50, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:32,193][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:27:32,197][inference.model_runners][INFO] - Timestep 49, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:33,845][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:27:33,849][inference.model_runners][INFO] - Timestep 48, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:35,506][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:35,511][inference.model_runners][INFO] - Timestep 47, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:37,174][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:37,178][inference.model_runners][INFO] - Timestep 46, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:38,851][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:38,856][inference.model_runners][INFO] - Timestep 45, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:40,528][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:40,533][inference.model_runners][INFO] - Timestep 44, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:42,202][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:42,206][inference.model_runners][INFO] - Timestep 43, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:43,889][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:43,893][inference.model_runners][INFO] - Timestep 42, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:45,582][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:45,586][inference.model_runners][INFO] - Timestep 41, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:47,255][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:47,260][inference.model_runners][INFO] - Timestep 40, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:48,959][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:48,964][inference.model_runners][INFO] - Timestep 39, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:50,647][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:50,651][inference.model_runners][INFO] - Timestep 38, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:52,343][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:52,347][inference.model_runners][INFO] - Timestep 37, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:54,038][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:54,043][inference.model_runners][INFO] - Timestep 36, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:55,723][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:27:55,728][inference.model_runners][INFO] - Timestep 35, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:57,415][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:27:57,420][inference.model_runners][INFO] - Timestep 34, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:27:59,109][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:27:59,114][inference.model_runners][INFO] - Timestep 33, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:00,795][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:28:00,800][inference.model_runners][INFO] - Timestep 32, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:02,484][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:28:02,489][inference.model_runners][INFO] - Timestep 31, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:04,186][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:28:04,190][inference.model_runners][INFO] - Timestep 30, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:05,882][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:05,886][inference.model_runners][INFO] - Timestep 29, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:07,577][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:07,581][inference.model_runners][INFO] - Timestep 28, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:09,274][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:09,279][inference.model_runners][INFO] - Timestep 27, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:10,966][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:10,970][inference.model_runners][INFO] - Timestep 26, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:12,823][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:12,827][inference.model_runners][INFO] - Timestep 25, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:14,523][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:14,528][inference.model_runners][INFO] - Timestep 24, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:16,207][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:16,211][inference.model_runners][INFO] - Timestep 23, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:17,891][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:28:17,895][inference.model_runners][INFO] - Timestep 22, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:19,576][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:19,580][inference.model_runners][INFO] - Timestep 21, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:21,254][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:21,258][inference.model_runners][INFO] - Timestep 20, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:22,942][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:22,947][inference.model_runners][INFO] - Timestep 19, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:24,635][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:24,640][inference.model_runners][INFO] - Timestep 18, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:26,328][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:26,333][inference.model_runners][INFO] - Timestep 17, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:28,021][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:28,026][inference.model_runners][INFO] - Timestep 16, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:29,693][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:29,697][inference.model_runners][INFO] - Timestep 15, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:31,382][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:31,387][inference.model_runners][INFO] - Timestep 14, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:33,077][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:33,081][inference.model_runners][INFO] - Timestep 13, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:34,772][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:34,776][inference.model_runners][INFO] - Timestep 12, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:36,459][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:36,464][inference.model_runners][INFO] - Timestep 11, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:38,141][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:38,145][inference.model_runners][INFO] - Timestep 10, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:39,827][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:39,832][inference.model_runners][INFO] - Timestep 9, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:41,513][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:41,518][inference.model_runners][INFO] - Timestep 8, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:43,189][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:43,194][inference.model_runners][INFO] - Timestep 7, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:44,884][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:44,889][inference.model_runners][INFO] - Timestep 6, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:46,576][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:46,580][inference.model_runners][INFO] - Timestep 5, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:48,261][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:48,265][inference.model_runners][INFO] - Timestep 4, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:49,937][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:49,941][inference.model_runners][INFO] - Timestep 3, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:51,615][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:28:51,620][inference.model_runners][INFO] - Timestep 2, input to next step: ---------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:56,948][__main__][INFO] - Finished design in 1.47 minutes
+[2024-11-08 11:28:56,948][__main__][INFO] - Making design ./1_E6_beat/1_E6_b_2
+[2024-11-08 11:28:56,958][inference.model_runners][INFO] - Using contig: ['H1-151/0 50-90']
+With this beta schedule (linear schedule, beta_0 = 0.04, beta_T = 0.28), alpha_bar_T = 0.00013696048699785024
+[2024-11-08 11:28:56,998][inference.model_runners][INFO] - Sequence init: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:28:58,622][inference.utils][INFO] - Sampled motif RMSD: 0.17
+[2024-11-08 11:28:58,626][inference.model_runners][INFO] - Timestep 50, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:00,300][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:00,305][inference.model_runners][INFO] - Timestep 49, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:02,001][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:02,005][inference.model_runners][INFO] - Timestep 48, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:03,708][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:03,715][inference.model_runners][INFO] - Timestep 47, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:05,435][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:05,439][inference.model_runners][INFO] - Timestep 46, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:07,154][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:07,158][inference.model_runners][INFO] - Timestep 45, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:08,827][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:08,832][inference.model_runners][INFO] - Timestep 44, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:10,554][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:10,559][inference.model_runners][INFO] - Timestep 43, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:12,280][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:12,285][inference.model_runners][INFO] - Timestep 42, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:14,015][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:14,020][inference.model_runners][INFO] - Timestep 41, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:15,743][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:15,747][inference.model_runners][INFO] - Timestep 40, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:17,462][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:17,466][inference.model_runners][INFO] - Timestep 39, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:19,193][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:19,198][inference.model_runners][INFO] - Timestep 38, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:20,918][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:20,922][inference.model_runners][INFO] - Timestep 37, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:22,648][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:22,652][inference.model_runners][INFO] - Timestep 36, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:24,387][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:24,392][inference.model_runners][INFO] - Timestep 35, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:26,128][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:26,132][inference.model_runners][INFO] - Timestep 34, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:27,852][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:27,856][inference.model_runners][INFO] - Timestep 33, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:29,567][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:29,571][inference.model_runners][INFO] - Timestep 32, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:31,287][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:31,291][inference.model_runners][INFO] - Timestep 31, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:33,011][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:33,016][inference.model_runners][INFO] - Timestep 30, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:34,737][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:29:34,741][inference.model_runners][INFO] - Timestep 29, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:36,451][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:36,455][inference.model_runners][INFO] - Timestep 28, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:38,172][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:38,177][inference.model_runners][INFO] - Timestep 27, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:39,901][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:39,905][inference.model_runners][INFO] - Timestep 26, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:41,628][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:41,632][inference.model_runners][INFO] - Timestep 25, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:43,361][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:43,366][inference.model_runners][INFO] - Timestep 24, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:45,091][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:45,096][inference.model_runners][INFO] - Timestep 23, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:46,814][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:46,818][inference.model_runners][INFO] - Timestep 22, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:48,529][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:48,533][inference.model_runners][INFO] - Timestep 21, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:50,246][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:50,250][inference.model_runners][INFO] - Timestep 20, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:51,969][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:51,973][inference.model_runners][INFO] - Timestep 19, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:53,681][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:53,685][inference.model_runners][INFO] - Timestep 18, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:55,377][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:55,381][inference.model_runners][INFO] - Timestep 17, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:57,095][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:57,099][inference.model_runners][INFO] - Timestep 16, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:29:58,813][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:29:58,818][inference.model_runners][INFO] - Timestep 15, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:00,532][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:30:00,536][inference.model_runners][INFO] - Timestep 14, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:02,257][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:30:02,261][inference.model_runners][INFO] - Timestep 13, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:03,961][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:30:03,965][inference.model_runners][INFO] - Timestep 12, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:05,681][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:30:05,685][inference.model_runners][INFO] - Timestep 11, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:07,397][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:30:07,402][inference.model_runners][INFO] - Timestep 10, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:09,101][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:30:09,106][inference.model_runners][INFO] - Timestep 9, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:10,817][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:10,821][inference.model_runners][INFO] - Timestep 8, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:12,536][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:30:12,540][inference.model_runners][INFO] - Timestep 7, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:14,253][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:14,257][inference.model_runners][INFO] - Timestep 6, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:15,964][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:15,968][inference.model_runners][INFO] - Timestep 5, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:17,699][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:17,703][inference.model_runners][INFO] - Timestep 4, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:19,416][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:19,421][inference.model_runners][INFO] - Timestep 3, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:21,134][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:21,138][inference.model_runners][INFO] - Timestep 2, input to next step: ------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:26,556][__main__][INFO] - Finished design in 1.49 minutes
+[2024-11-08 11:30:26,556][__main__][INFO] - Making design ./1_E6_beat/1_E6_b_3
+[2024-11-08 11:30:26,566][inference.model_runners][INFO] - Using contig: ['H1-151/0 50-90']
+With this beta schedule (linear schedule, beta_0 = 0.04, beta_T = 0.28), alpha_bar_T = 0.00013696048699785024
+[2024-11-08 11:30:26,605][inference.model_runners][INFO] - Sequence init: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:28,195][inference.utils][INFO] - Sampled motif RMSD: 0.17
+[2024-11-08 11:30:28,199][inference.model_runners][INFO] - Timestep 50, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:29,834][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:30:29,838][inference.model_runners][INFO] - Timestep 49, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:31,470][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:31,474][inference.model_runners][INFO] - Timestep 48, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:33,136][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:33,140][inference.model_runners][INFO] - Timestep 47, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:34,815][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:34,820][inference.model_runners][INFO] - Timestep 46, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:36,476][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:36,480][inference.model_runners][INFO] - Timestep 45, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:38,156][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:38,161][inference.model_runners][INFO] - Timestep 44, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:39,838][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:39,842][inference.model_runners][INFO] - Timestep 43, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:41,522][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:41,526][inference.model_runners][INFO] - Timestep 42, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:43,202][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:43,206][inference.model_runners][INFO] - Timestep 41, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:44,863][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:44,867][inference.model_runners][INFO] - Timestep 40, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:46,552][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:46,557][inference.model_runners][INFO] - Timestep 39, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:48,243][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:48,247][inference.model_runners][INFO] - Timestep 38, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:49,930][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:49,934][inference.model_runners][INFO] - Timestep 37, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:51,614][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:51,618][inference.model_runners][INFO] - Timestep 36, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:53,272][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:53,276][inference.model_runners][INFO] - Timestep 35, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:54,959][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:54,963][inference.model_runners][INFO] - Timestep 34, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:56,652][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:56,656][inference.model_runners][INFO] - Timestep 33, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:30:58,337][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:30:58,341][inference.model_runners][INFO] - Timestep 32, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:00,019][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:00,023][inference.model_runners][INFO] - Timestep 31, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:01,707][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:01,711][inference.model_runners][INFO] - Timestep 30, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:03,398][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:03,402][inference.model_runners][INFO] - Timestep 29, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:05,070][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:05,074][inference.model_runners][INFO] - Timestep 28, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:06,761][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:06,766][inference.model_runners][INFO] - Timestep 27, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:08,435][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:08,439][inference.model_runners][INFO] - Timestep 26, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:10,124][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:10,129][inference.model_runners][INFO] - Timestep 25, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:11,813][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:11,817][inference.model_runners][INFO] - Timestep 24, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:13,488][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:13,492][inference.model_runners][INFO] - Timestep 23, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:15,184][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:15,188][inference.model_runners][INFO] - Timestep 22, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:16,871][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:16,877][inference.model_runners][INFO] - Timestep 21, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:18,562][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:18,566][inference.model_runners][INFO] - Timestep 20, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:20,322][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:20,326][inference.model_runners][INFO] - Timestep 19, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:22,006][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:22,010][inference.model_runners][INFO] - Timestep 18, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:23,687][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:23,692][inference.model_runners][INFO] - Timestep 17, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:25,356][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:25,361][inference.model_runners][INFO] - Timestep 16, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:27,032][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:27,036][inference.model_runners][INFO] - Timestep 15, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:28,704][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:28,708][inference.model_runners][INFO] - Timestep 14, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:30,383][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:30,387][inference.model_runners][INFO] - Timestep 13, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:32,063][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:32,067][inference.model_runners][INFO] - Timestep 12, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:33,739][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:33,743][inference.model_runners][INFO] - Timestep 11, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:35,409][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:35,414][inference.model_runners][INFO] - Timestep 10, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:37,084][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:37,088][inference.model_runners][INFO] - Timestep 9, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:38,749][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:38,753][inference.model_runners][INFO] - Timestep 8, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:40,426][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:40,430][inference.model_runners][INFO] - Timestep 7, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:42,104][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:42,109][inference.model_runners][INFO] - Timestep 6, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:43,784][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:43,788][inference.model_runners][INFO] - Timestep 5, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:45,465][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:45,469][inference.model_runners][INFO] - Timestep 4, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:47,139][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:47,143][inference.model_runners][INFO] - Timestep 3, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:48,820][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:31:48,825][inference.model_runners][INFO] - Timestep 2, input to next step: --------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:54,193][__main__][INFO] - Finished design in 1.46 minutes
+[2024-11-08 11:31:54,194][__main__][INFO] - Making design ./1_E6_beat/1_E6_b_4
+[2024-11-08 11:31:54,203][inference.model_runners][INFO] - Using contig: ['H1-151/0 50-90']
+With this beta schedule (linear schedule, beta_0 = 0.04, beta_T = 0.28), alpha_bar_T = 0.00013696048699785024
+[2024-11-08 11:31:54,243][inference.model_runners][INFO] - Sequence init: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:55,901][inference.utils][INFO] - Sampled motif RMSD: 0.18
+[2024-11-08 11:31:55,917][inference.model_runners][INFO] - Timestep 50, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:57,623][inference.utils][INFO] - Sampled motif RMSD: 0.15
+[2024-11-08 11:31:57,627][inference.model_runners][INFO] - Timestep 49, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:31:59,361][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:31:59,365][inference.model_runners][INFO] - Timestep 48, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:01,111][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:01,115][inference.model_runners][INFO] - Timestep 47, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:02,865][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:02,869][inference.model_runners][INFO] - Timestep 46, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:04,603][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:04,608][inference.model_runners][INFO] - Timestep 45, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:06,371][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:06,375][inference.model_runners][INFO] - Timestep 44, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:08,137][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:08,141][inference.model_runners][INFO] - Timestep 43, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:09,895][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:09,899][inference.model_runners][INFO] - Timestep 42, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:11,663][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:11,668][inference.model_runners][INFO] - Timestep 41, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:13,431][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:13,436][inference.model_runners][INFO] - Timestep 40, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:15,209][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:15,214][inference.model_runners][INFO] - Timestep 39, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:16,985][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:16,990][inference.model_runners][INFO] - Timestep 38, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:18,743][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:18,748][inference.model_runners][INFO] - Timestep 37, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:20,519][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:20,523][inference.model_runners][INFO] - Timestep 36, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:22,295][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:22,299][inference.model_runners][INFO] - Timestep 35, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:24,065][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:24,069][inference.model_runners][INFO] - Timestep 34, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:25,845][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:25,849][inference.model_runners][INFO] - Timestep 33, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:27,622][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:27,627][inference.model_runners][INFO] - Timestep 32, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:29,393][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:29,397][inference.model_runners][INFO] - Timestep 31, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:31,169][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:31,174][inference.model_runners][INFO] - Timestep 30, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:32,936][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:32,941][inference.model_runners][INFO] - Timestep 29, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:34,709][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:34,713][inference.model_runners][INFO] - Timestep 28, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:36,487][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:32:36,491][inference.model_runners][INFO] - Timestep 27, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:38,264][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:38,268][inference.model_runners][INFO] - Timestep 26, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:40,036][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:32:40,040][inference.model_runners][INFO] - Timestep 25, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:41,813][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:32:41,818][inference.model_runners][INFO] - Timestep 24, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:43,590][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:43,594][inference.model_runners][INFO] - Timestep 23, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:45,366][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:32:45,370][inference.model_runners][INFO] - Timestep 22, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:47,141][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:47,145][inference.model_runners][INFO] - Timestep 21, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:48,911][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:32:48,915][inference.model_runners][INFO] - Timestep 20, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:50,690][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:50,695][inference.model_runners][INFO] - Timestep 19, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:52,461][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:32:52,466][inference.model_runners][INFO] - Timestep 18, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:54,231][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:54,236][inference.model_runners][INFO] - Timestep 17, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:56,002][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:56,006][inference.model_runners][INFO] - Timestep 16, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:57,786][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:57,791][inference.model_runners][INFO] - Timestep 15, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:32:59,557][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:32:59,561][inference.model_runners][INFO] - Timestep 14, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:01,388][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:33:01,393][inference.model_runners][INFO] - Timestep 13, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:03,161][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:33:03,166][inference.model_runners][INFO] - Timestep 12, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:04,924][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:33:04,928][inference.model_runners][INFO] - Timestep 11, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:06,667][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:33:06,672][inference.model_runners][INFO] - Timestep 10, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:08,435][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:33:08,439][inference.model_runners][INFO] - Timestep 9, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:10,195][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:33:10,199][inference.model_runners][INFO] - Timestep 8, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:11,933][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:33:11,937][inference.model_runners][INFO] - Timestep 7, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:13,698][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:33:13,702][inference.model_runners][INFO] - Timestep 6, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:15,457][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:33:15,462][inference.model_runners][INFO] - Timestep 5, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:17,221][inference.utils][INFO] - Sampled motif RMSD: 0.14
+[2024-11-08 11:33:17,226][inference.model_runners][INFO] - Timestep 4, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:18,966][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:33:18,971][inference.model_runners][INFO] - Timestep 3, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:20,737][inference.utils][INFO] - Sampled motif RMSD: 0.13
+[2024-11-08 11:33:20,742][inference.model_runners][INFO] - Timestep 2, input to next step: ----------------------------------------------------------------------------------------MFQDPQERPRKLPQLCTELQTTIHDIILECVYCKQQLLRREVYDFAFRDLCIVYRDGNPYAVCDKCLKFYSKISEYRHYSYSLYGTTLEQQYNKPLSDLLIRCINCQKPLSPEEKQRHLDKKQRFHNIRGRWTGRCMSCSRSSRTRRETQL
+[2024-11-08 11:33:26,235][__main__][INFO] - Finished design in 1.53 minutes
